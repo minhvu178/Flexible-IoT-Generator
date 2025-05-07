@@ -1,0 +1,34 @@
+
+{
+  "general": {
+    "log_level": "INFO",
+    "data_persistence": {
+      "type": "mongodb",
+      "connection": {
+        "host": "localhost",
+        "port": 27017,
+        "database": "machinemeter",
+        "collection": "sensor_data"
+      }
+    }
+  },
+  "simulation": {
+    "start_date": "2025-05-01T00:00:00Z",
+    "end_date": null,
+    "time_acceleration": 1,
+    "update_interval_ms": 1000
+  },
+  "factories": [
+    {
+      "id": "factory-101",
+      "name": "Hanoi Plant",
+      "template": "plastic_factory",
+      "time_zone": "+07:00",
+      "operating_hours": {
+        "start": "08:00",
+        "end": "20:00",
+        "days": [1, 2, 3, 4, 5]
+      }
+    }
+  ]
+}
