@@ -1,5 +1,5 @@
 import time
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from typing import Dict, Any, List, Optional
 
 from .core.config import Config
@@ -77,7 +77,13 @@ class Application:
         self.logger.info("Starting data generation...")
         
         start_date = self.config.get_datetime('simulation.start_date')
-        end_date = self.config.get_datetime('simulation.end_date') or datetime.now()
+        if start_date and start_date.tzinfo is None:
+            start_date = start_date.replace(tzinfo=timezone.utc)
+            
+        end_date = self.config.get_datetime('simulation.end_date') or datetime.now(timezone.utc)
+        if end_date.tzinfo is None:
+            end_date = end_date.replace(tzinfo=timezone.utc)
+            
         interval_ms = self.config.get('simulation.update_interval_ms')
         acceleration = self.config.get('simulation.time_acceleration')
         
@@ -103,6 +109,6 @@ class Application:
     
     def _generate_realtime_data(self):
         """Generate data for current timestamp."""
-        now = datetime.now()
+        now = datetime.now(timezone.utc)
         data = self.generate_data(now)
         self.persist_data(data)
