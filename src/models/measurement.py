@@ -1,5 +1,6 @@
 # src/models/measurement.py
 from datetime import datetime
+from typing import Dict, Any, Optional
 
 class Measurement:
     """Represents a measurement from src.a sensor."""
