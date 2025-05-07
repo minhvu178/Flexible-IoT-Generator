@@ -142,7 +142,10 @@ class SensorGenerator(BaseGenerator):
             return timestamp.replace(tzinfo=timezone.utc)
             
         # Parse the timezone offset
-        hours, minutes = map(int, offset_str.replace(':', ''))
+        sign = 1 if offset_str[0] == '+' else -1
+        hours_minutes = offset_str[1:].split(':')
+        hours = int(hours_minutes[0]) * sign
+        minutes = int(hours_minutes[1]) * sign if len(hours_minutes) > 1 else 0
         
         # Create timezone offset
         tz_offset = timezone(timedelta(hours=hours, minutes=minutes))
