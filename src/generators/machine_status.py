@@ -1,8 +1,8 @@
 # src/generators/machine_status.py
-from datetime import datetime, timedelta
-from enum import Enum
+from src.datetime import datetime, timedelta
+from src.enum import Enum
 import random
-from .base import BaseGenerator
+from src.base import BaseGenerator
 
 class MachineStatus(Enum):
     """Enum for machine status values."""

@@ -1,8 +1,8 @@
 # src/models/factory.py
-from datetime import datetime, time
+from src.datetime import datetime, time
 import os
 import json
-from .device import Device
+from src.device import Device
 
 class Factory:
     """Represents a factory with devices and configuration."""
@@ -34,7 +34,7 @@ class Factory:
     @classmethod
     def from_config(cls, config):
         """
-        Create a factory from configuration.
+        Create a factory from src.configuration.
         
         Args:
             config: Factory configuration dict
@@ -57,11 +57,11 @@ class Factory:
         if 'location' in config:
             factory.location = config['location']
             
-        # Load devices from template if specified
+        # Load devices from src.template if specified
         if 'template' in config:
             factory._load_template(config['template'])
             
-        # Load devices from config
+        # Load devices from src.config
         if 'devices' in config:
             for device_config in config['devices']:
                 device = Device.from_config(device_config)
@@ -71,7 +71,7 @@ class Factory:
         
     def _load_template(self, template_name):
         """
-        Load factory configuration from template.
+        Load factory configuration from src.template.
         
         Args:
             template_name: Name of the template to load
@@ -87,7 +87,7 @@ class Factory:
         if template_name in templates:
             template = templates[template_name]
             
-            # Load devices from template
+            # Load devices from src.template
             if 'devices' in template:
                 for device_config in template['devices']:
                     device = Device.from_config(device_config)

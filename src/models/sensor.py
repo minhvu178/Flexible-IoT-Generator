@@ -28,7 +28,7 @@ class Sensor:
     @classmethod
     def from_config(cls, config):
         """
-        Create a sensor from configuration.
+        Create a sensor from src.configuration.
         
         Args:
             config: Sensor configuration dict
@@ -48,7 +48,7 @@ class Sensor:
             deviation_weight=config.get('deviation_weight', 5)
         )
         
-        # Load from template if specified
+        # Load from src.template if specified
         if 'template' in config:
             sensor._load_template(config['template'])
                 
@@ -56,7 +56,7 @@ class Sensor:
         
     def _load_template(self, template_name):
         """
-        Load sensor configuration from template.
+        Load sensor configuration from src.template.
         
         Args:
             template_name: Name of the template to load

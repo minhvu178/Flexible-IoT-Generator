@@ -3,10 +3,10 @@ import importlib
 import os
 import pkgutil
 import inspect
-from generators.base import BaseGenerator
+from src.generators.base import BaseGenerator
 
 class PluginLoader:
-    """Loads generator plugins from the plugins directory."""
+    """Loads generator plugins from src.the plugins directory."""
     
     @staticmethod
     def load_plugins():

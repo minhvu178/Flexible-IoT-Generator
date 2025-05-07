@@ -1,7 +1,7 @@
 # src/generators/sensor.py
-from datetime import datetime, timezone, timedelta
+from src.datetime import datetime, timezone, timedelta
 import random
-from .base import BaseGenerator
+from src.base import BaseGenerator
 
 class SensorGenerator(BaseGenerator):
     """Generates sensor measurement data."""

@@ -1,4 +1,3 @@
-# src/__main__.py
 import argparse
 import os
 from src.app import Application

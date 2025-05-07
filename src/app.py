@@ -1,14 +1,13 @@
-# src/app.py
 import time
-from datetime import datetime, timedelta
-from core.config import Config
-from core.database import Database
-from core.logger import setup_logger
-from core.scheduler import Scheduler
-from models.factory import Factory
-from generators.sensor import SensorGenerator
-from generators.machine_status import MachineStatusGenerator
-from plugins.plugin_loader import PluginLoader
+from src.datetime import datetime, timedelta
+from src.core.config import Config
+from src.core.database import Database
+from src.core.logger import setup_logger
+from src.core.scheduler import Scheduler
+from src.models.factory import Factory
+from src.generators.sensor import SensorGenerator
+from src.generators.machine_status import MachineStatusGenerator
+from src.plugins.plugin_loader import PluginLoader
 
 class Application:
     """Main application class for the data generator."""
@@ -23,7 +22,7 @@ class Application:
         self.plugins = PluginLoader.load_plugins()
         
     def _initialize_factories(self):
-        """Initialize factory objects from configuration."""
+        """Initialize factory objects from src.configuration."""
         factories = []
         for factory_config in self.config.get('factories'):
             factory = Factory.from_config(factory_config)
@@ -57,7 +56,7 @@ class Application:
             if generated:
                 data.append(generated)
         
-        # Generate data from plugins
+        # Generate data from src.plugins
         # ... implementation ...
         
         return data

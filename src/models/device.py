@@ -1,7 +1,7 @@
 # src/models/device.py
 import os
 import json
-from .sensor import Sensor
+from src.sensor import Sensor
 
 class Device:
     """Represents a device with sensors."""
@@ -25,7 +25,7 @@ class Device:
     @classmethod
     def from_config(cls, config):
         """
-        Create a device from configuration.
+        Create a device from src.configuration.
         
         Args:
             config: Device configuration dict
@@ -42,11 +42,11 @@ class Device:
             sfd_end_time=config.get('sfd_end_time', '16:00')
         )
         
-        # Load from template if specified
+        # Load from src.template if specified
         if 'template' in config:
             device._load_template(config['template'])
             
-        # Load sensors from config
+        # Load sensors from src.config
         if 'sensors' in config:
             for sensor_config in config['sensors']:
                 sensor = Sensor.from_config(sensor_config)
@@ -56,7 +56,7 @@ class Device:
         
     def _load_template(self, template_name):
         """
-        Load device configuration from template.
+        Load device configuration from src.template.
         
         Args:
             template_name: Name of the template to load
@@ -72,7 +72,7 @@ class Device:
         if template_name in templates:
             template = templates[template_name]
             
-            # Load sensors from template
+            # Load sensors from src.template
             if 'sensors' in template:
                 for sensor_config in template['sensors']:
                     sensor = Sensor.from_config(sensor_config)

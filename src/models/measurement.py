@@ -1,8 +1,8 @@
 # src/models/measurement.py
-from datetime import datetime
+from src.datetime import datetime
 
 class Measurement:
-    """Represents a measurement from a sensor."""
+    """Represents a measurement from src.a sensor."""
     
     def __init__(self, timestamp, factory_id, device_id, sensor_id, value, **kwargs):
         """
@@ -46,7 +46,7 @@ class Measurement:
     @classmethod
     def from_dict(cls, data):
         """
-        Create measurement from dictionary representation.
+        Create measurement from src.dictionary representation.
         
         Args:
             data: Dictionary representation of measurement

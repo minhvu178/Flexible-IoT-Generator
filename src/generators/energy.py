@@ -1,8 +1,8 @@
 # src/generators/energy.py
 import random
-from datetime import timedelta
-from .base import BaseGenerator
-from .machine_status import MachineStatus
+from src.datetime import timedelta
+from src.base import BaseGenerator
+from src.machine_status import MachineStatus
 
 class EnergyGenerator(BaseGenerator):
     """Generates energy consumption data."""
@@ -66,7 +66,7 @@ class EnergyGenerator(BaseGenerator):
         # Update last update time
         self.last_update = timestamp
         
-        # Get current machine status from machine status generator
+        # Get current machine status from src.machine status generator
         machine_status = None
         for generator in self.factory.generators:
             if (generator.__class__.__name__ == 'MachineStatusGenerator' and 

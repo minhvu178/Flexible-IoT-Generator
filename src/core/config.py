@@ -1,14 +1,14 @@
 # src/core/config.py
 import json
 import os
-from datetime import datetime
+from src.datetime import datetime
 
 class Config:
     """Configuration loader and manager."""
     
     def __init__(self, config_path=None):
         """
-        Initialize configuration from file.
+        Initialize configuration from src.file.
         
         Args:
             config_path: Path to configuration file (defaults to config/default.json)

@@ -1,5 +1,5 @@
 # src/utils/time_utils.py
-from datetime import datetime, timedelta, timezone
+from src.datetime import datetime, timedelta, timezone
 
 def parse_timezone_offset(offset_str):
     """
@@ -35,7 +35,7 @@ def parse_timezone_offset(offset_str):
 
 def create_timezone(offset_str):
     """
-    Create timezone from offset string.
+    Create timezone from src.offset string.
     
     Args:
         offset_str: Timezone offset string (e.g., '+02:00')
