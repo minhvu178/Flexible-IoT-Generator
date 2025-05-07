@@ -1,6 +1,6 @@
 # src/generators/energy.py
 import random
-from src.datetime import timedelta
+from datetime import timedelta
 from src.base import BaseGenerator
 from src.machine_status import MachineStatus
 

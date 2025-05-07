@@ -1,5 +1,5 @@
 # src/generators/sensor.py
-from src.datetime import datetime, timezone, timedelta
+from datetime import datetime, timezone, timedelta
 import random
 from src.base import BaseGenerator
 

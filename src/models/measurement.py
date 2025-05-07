@@ -1,5 +1,5 @@
 # src/models/measurement.py
-from src.datetime import datetime
+from datetime import datetime
 
 class Measurement:
     """Represents a measurement from src.a sensor."""

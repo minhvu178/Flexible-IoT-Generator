@@ -1,6 +1,6 @@
 # src/generators/quality.py
 import random
-from src.datetime import timedelta
+from datetime import timedelta
 from src.base import BaseGenerator
 
 class QualityGenerator(BaseGenerator):

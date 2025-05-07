@@ -1,5 +1,5 @@
 # src/utils/time_utils.py
-from src.datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta, timezone
 
 def parse_timezone_offset(offset_str):
     """

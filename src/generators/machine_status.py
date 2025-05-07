@@ -1,5 +1,5 @@
 # src/generators/machine_status.py
-from src.datetime import datetime, timedelta
+from datetime import datetime, timedelta
 from src.enum import Enum
 import random
 from src.base import BaseGenerator

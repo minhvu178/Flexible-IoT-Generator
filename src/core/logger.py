@@ -1,7 +1,7 @@
 # src/core/logger.py
 import logging
 import os
-from src.datetime import datetime
+from datetime import datetime
 
 def setup_logger(log_level='INFO', log_dir='logs'):
     """

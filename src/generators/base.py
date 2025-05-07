@@ -1,6 +1,6 @@
 # src/generators/base.py
 from src.abc import ABC, abstractmethod
-from src.datetime import datetime
+from datetime import datetime
 
 class BaseGenerator(ABC):
     """Base class for all data generators."""

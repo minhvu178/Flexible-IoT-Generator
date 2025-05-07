@@ -1,5 +1,5 @@
 # src/models/factory.py
-from src.datetime import datetime, time
+from datetime import datetime, time
 import os
 import json
 from src.device import Device

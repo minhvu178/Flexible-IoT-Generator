@@ -1,7 +1,7 @@
 # src/core/config.py
 import json
 import os
-from src.datetime import datetime
+from datetime import datetime
 
 class Config:
     """Configuration loader and manager."""
