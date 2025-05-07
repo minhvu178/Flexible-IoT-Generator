@@ -1,9 +1,9 @@
 # src/utils/time_utils.py
-from ..core.config import Config
 from datetime import datetime, timezone, timedelta
 import pytz
+from typing import Optional, Tuple
 
-def parse_timezone_offset(offset_str):
+def parse_timezone_offset(offset_str: Optional[str]) -> Tuple[int, int]:
     """
     Parse timezone offset string to hours and minutes.
     
@@ -19,6 +19,39 @@ def parse_timezone_offset(offset_str):
     # Handle Z (UTC) timezone
     if offset_str == 'Z':
         return 0, 0
+
+def get_timezone(timezone_str: Optional[str]) -> timezone:
+    """
+    Get a timezone object from a timezone string.
+    
+    Args:
+        timezone_str: Timezone string (e.g., 'UTC', 'Europe/Berlin', '+02:00')
+        
+    Returns:
+        timezone object
+    """
+    if not timezone_str:
+        return timezone.utc
+        
+    try:
+        # Try to parse as timezone name
+        return pytz.timezone(timezone_str)
+    except pytz.UnknownTimeZoneError:
+        # Try to parse as offset
+        hours, minutes = parse_timezone_offset(timezone_str)
+        return timezone(timedelta(hours=hours, minutes=minutes))
+
+def create_timezone(timezone_str: Optional[str]) -> timezone:
+    """
+    Create a timezone object from a timezone string.
+    
+    Args:
+        timezone_str: Timezone string (e.g., 'UTC', 'Europe/Berlin', '+02:00')
+        
+    Returns:
+        timezone object
+    """
+    return get_timezone(timezone_str)
         
     # Parse sign
     sign = 1
