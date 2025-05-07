@@ -1,6 +1,11 @@
 # src/core/scheduler.py
 import threading
-import time
+from datetime import datetime, timedelta
+from typing import Callable, Dict, Any
+
+from apscheduler.schedulers.asyncio import AsyncIOScheduler
+from apscheduler.triggers.interval import IntervalTrigger
+from ..utils.time_utils import get_timezone
 
 class Scheduler:
     """Task scheduler for periodic data generation."""

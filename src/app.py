@@ -1,13 +1,19 @@
 import time
 from datetime import datetime, timedelta
-from src.core.config import Config
-from src.core.database import Database
-from src.core.logger import setup_logger
-from src.core.scheduler import Scheduler
-from src.models.factory import Factory
-from src.generators.sensor import SensorGenerator
-from src.generators.machine_status import MachineStatusGenerator
-from src.plugins.plugin_loader import PluginLoader
+from typing import Dict, Any, List, Optional
+
+from .core.config import Config
+from .core.database import Database
+from .core.logger import setup_logger
+from .core.scheduler import Scheduler
+from .models.factory import Factory
+from .models.device import Device
+from .models.sensor import Sensor
+from .models.measurement import Measurement
+from .generators.sensor import SensorGenerator
+from .generators.machine_status import MachineStatusGenerator
+from .plugins.plugin_loader import PluginLoader
+from .utils.validation import validate_app_config
 
 class Application:
     """Main application class for the data generator."""

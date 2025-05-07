@@ -1,6 +1,5 @@
 # src/models/sensor.py
-import os
-import json
+from typing import Any, Dict, Optional
 
 class Sensor:
     """Represents a sensor that generates data."""

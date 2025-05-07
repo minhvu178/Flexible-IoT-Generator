@@ -1,9 +1,12 @@
 # src/core/logger.py
 import logging
-import os
 from datetime import datetime
+from typing import Optional
 
-def setup_logger(log_level='INFO', log_dir='logs'):
+from ..core.config import Config
+from ..utils.validation import validate_logging_config
+
+def setup_logger(log_level: Optional[str] = 'INFO', log_dir: Optional[str] = 'logs'):
     """
     Set up and configure the logger.
     

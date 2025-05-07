@@ -1,7 +1,7 @@
 # src/models/device.py
-import os
-import json
-from src.sensor import Sensor
+from typing import List, Optional
+
+from .sensor import Sensor
 
 class Device:
     """Represents a device with sensors."""

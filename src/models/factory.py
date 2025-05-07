@@ -1,8 +1,9 @@
 # src/models/factory.py
 from datetime import datetime, time
-import os
-import json
-from src.device import Device
+from typing import List, Optional
+
+from pydantic import BaseModel, Field
+from .device import Device
 
 class Factory:
     """Represents a factory with devices and configuration."""

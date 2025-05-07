@@ -1,6 +1,12 @@
 # src/generators/base.py
-from src.abc import ABC, abstractmethod
+from abc import ABC, abstractmethod
 from datetime import datetime
+from typing import Any, Dict, Optional
+
+from ..core.config import Config
+from ..models.factory import Factory
+from ..models.device import Device
+from ..models.sensor import Sensor
 
 class BaseGenerator(ABC):
     """Base class for all data generators."""
