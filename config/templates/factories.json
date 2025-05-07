@@ -1,0 +1,110 @@
+{
+    "plastic_factory": {
+      "devices": [
+        {
+          "template": "extruder",
+          "deviceId": "extruder-1",
+          "deviceType": "plastic_extruder",
+          "stabilityFactor": 95
+        },
+        {
+          "template": "injection_molder",
+          "deviceId": "molder-1",
+          "deviceType": "injection_molder",
+          "stabilityFactor": 90
+        },
+        {
+          "template": "packaging",
+          "deviceId": "packager-1",
+          "deviceType": "packaging_machine",
+          "stabilityFactor": 92
+        }
+      ],
+      "operating_hours": {
+        "start": "08:00",
+        "end": "20:00",
+        "days": [1, 2, 3, 4, 5]
+      }
+    },
+    "metal_factory": {
+      "devices": [
+        {
+          "template": "cnc_machine",
+          "deviceId": "cnc-1",
+          "deviceType": "cnc_machine",
+          "stabilityFactor": 88
+        },
+        {
+          "template": "conveyer",
+          "deviceId": "conveyer-1",
+          "deviceType": "conveyer_motor",
+          "stabilityFactor": 95
+        },
+        {
+          "template": "hoist",
+          "deviceId": "hoist-1",
+          "deviceType": "hoist_motor",
+          "stabilityFactor": 85
+        }
+      ],
+      "operating_hours": {
+        "start": "00:00",
+        "end": "23:59",
+        "days": [0, 1, 2, 3, 4, 5, 6]
+      }
+    },
+    "oil_plant": {
+      "devices": [
+        {
+          "template": "oil_pump",
+          "deviceId": "oil-pump-1",
+          "deviceType": "oil_pump",
+          "stabilityFactor": 92
+        },
+        {
+          "template": "fuel_pump",
+          "deviceId": "fuel-pump-1",
+          "deviceType": "fuel_pump",
+          "stabilityFactor": 90
+        },
+        {
+          "template": "water_pump",
+          "deviceId": "water-pump-1",
+          "deviceType": "water_pump",
+          "stabilityFactor": 95
+        }
+      ],
+      "operating_hours": {
+        "start": "00:00",
+        "end": "23:59",
+        "days": [0, 1, 2, 3, 4, 5, 6]
+      }
+    },
+    "food_factory": {
+      "devices": [
+        {
+          "template": "oven",
+          "deviceId": "oven-1",
+          "deviceType": "oven",
+          "stabilityFactor": 85
+        },
+        {
+          "template": "gas_oven",
+          "deviceId": "gas-oven-1",
+          "deviceType": "gas_oven",
+          "stabilityFactor": 82
+        },
+        {
+          "template": "pressure_oven",
+          "deviceId": "pressure-oven-1",
+          "deviceType": "pressure_oven",
+          "stabilityFactor": 78
+        }
+      ],
+      "operating_hours": {
+        "start": "06:00",
+        "end": "22:00",
+        "days": [0, 1, 2, 3, 4, 5, 6]
+      }
+    }
+  }

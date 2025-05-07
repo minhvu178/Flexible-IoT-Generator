@@ -1,0 +1,44 @@
+{
+    "general": {
+      "log_level": "INFO",
+      "data_persistence": {
+        "type": "mongodb",
+        "connection": {
+          "host": "localhost",
+          "port": 27017,
+          "database": "iot_data",
+          "collection": "sensor_data",
+          "time_series": true,
+          "granularity": "seconds"
+        }
+      }
+    },
+    "simulation": {
+      "start_date": "2023-01-01T00:00:00Z",
+      "end_date": null,
+      "time_acceleration": 1,
+      "update_interval_ms": 1000
+    },
+    "factories": [
+      {
+        "id": "factory-101",
+        "name": "Main Plant",
+        "template": "metal_factory",
+        "time_zone": "+02:00",
+        "location": {
+          "latitude": -26.195246,
+          "longitude": 28.034088
+        }
+      },
+      {
+        "id": "factory-102",
+        "name": "Secondary Plant",
+        "template": "plastic_factory",
+        "time_zone": "+02:00",
+        "location": {
+          "latitude": -33.924869,
+          "longitude": 18.424055
+        }
+      }
+    ]
+  }

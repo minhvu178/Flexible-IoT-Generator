@@ -1,0 +1,65 @@
+{
+    "general": {
+      "log_level": "INFO",
+      "data_persistence": {
+        "type": "mongodb",
+        "connection": {
+          "host": "localhost",
+          "port": 27017,
+          "database": "iot_data",
+          "collection": "failure_data",
+          "time_series": true,
+          "granularity": "seconds"
+        }
+      }
+    },
+    "simulation": {
+      "start_date": "2023-01-01T00:00:00Z",
+      "end_date": "2023-01-03T00:00:00Z",
+      "time_acceleration": 60,
+      "update_interval_ms": 1000
+    },
+    "factories": [
+      {
+        "id": "factory-103",
+        "name": "Oil Plant",
+        "template": "oil_plant",
+        "time_zone": "+02:00",
+        "location": {
+          "latitude": -25.747855,
+          "longitude": 28.188057
+        }
+      }
+    ],
+    "failure_schedule": [
+      {
+        "factory_id": "factory-103",
+        "device_id": "oil-pump-1",
+        "failure_time": "2023-01-02T14:30:00Z",
+        "warning_signs_start": "2023-01-02T10:00:00Z",
+        "failure_params": {
+          "sensor_patterns": {
+            "temp-1": {
+              "pattern": "spike",
+              "magnitude": 2.5
+            },
+            "pressure-1": {
+              "pattern": "fluctuate",
+              "magnitude": 3.0,
+              "frequency": "increasing"
+            },
+            "rpm-1": {
+              "pattern": "drop",
+              "magnitude": 0.5,
+              "pre_failure_spike": true
+            }
+          },
+          "machine_status": {
+            "pre_failure": "ERROR",
+            "post_failure": "STOPPED",
+            "recovery_time": "2023-01-02T18:00:00Z"
+          }
+        }
+      }
+    ]
+  }

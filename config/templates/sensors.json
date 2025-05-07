@@ -1,0 +1,128 @@
+{
+    "temperature_standard": {
+      "sensorType": "temperature",
+      "unit": "Celsius",
+      "min_range": 20,
+      "max_range": 100,
+      "mean": 60,
+      "sd": 10,
+      "deviation_weight": 5
+    },
+    "temperature_high": {
+      "sensorType": "temperature",
+      "unit": "Celsius",
+      "min_range": 500,
+      "max_range": 1000,
+      "mean": 750,
+      "sd": 50,
+      "deviation_weight": 5
+    },
+    "pressure_low": {
+      "sensorType": "pressure",
+      "unit": "Psi",
+      "min_range": 10,
+      "max_range": 30,
+      "mean": 20,
+      "sd": 5,
+      "deviation_weight": 5
+    },
+    "pressure_medium": {
+      "sensorType": "pressure",
+      "unit": "Bar",
+      "min_range": 100,
+      "max_range": 200,
+      "mean": 150,
+      "sd": 15,
+      "deviation_weight": 5
+    },
+    "pressure_high": {
+      "sensorType": "pressure",
+      "unit": "Psi",
+      "min_range": 1000,
+      "max_range": 2000,
+      "mean": 1500,
+      "sd": 100,
+      "deviation_weight": 5
+    },
+    "flow_standard": {
+      "sensorType": "flow_rate",
+      "unit": "L/min",
+      "min_range": 10,
+      "max_range": 100,
+      "mean": 50,
+      "sd": 10,
+      "deviation_weight": 5
+    },
+    "flow_high": {
+      "sensorType": "flow_rate",
+      "unit": "L/min",
+      "min_range": 100,
+      "max_range": 1000,
+      "mean": 500,
+      "sd": 50,
+      "deviation_weight": 5
+    },
+    "revolutions_standard": {
+      "sensorType": "revolutions",
+      "unit": "RPM",
+      "min_range": 500,
+      "max_range": 1500,
+      "mean": 1000,
+      "sd": 100,
+      "deviation_weight": 5
+    },
+    "revolutions_high": {
+      "sensorType": "revolutions",
+      "unit": "RPM",
+      "min_range": 2000,
+      "max_range": 4000,
+      "mean": 3000,
+      "sd": 200,
+      "deviation_weight": 5
+    },
+    "voltage_standard": {
+      "sensorType": "voltage",
+      "unit": "Volt",
+      "min_range": 220,
+      "max_range": 240,
+      "mean": 230,
+      "sd": 5,
+      "deviation_weight": 5
+    },
+    "voltage_industrial": {
+      "sensorType": "voltage",
+      "unit": "Volt",
+      "min_range": 320,
+      "max_range": 380,
+      "mean": 360,
+      "sd": 10,
+      "deviation_weight": 5
+    },
+    "current_standard": {
+      "sensorType": "current",
+      "unit": "Amp",
+      "min_range": 5,
+      "max_range": 15,
+      "mean": 10,
+      "sd": 2,
+      "deviation_weight": 5
+    },
+    "current_high": {
+      "sensorType": "current",
+      "unit": "Amp",
+      "min_range": 20,
+      "max_range": 40,
+      "mean": 30,
+      "sd": 5,
+      "deviation_weight": 5
+    },
+    "vibration_standard": {
+      "sensorType": "vibration",
+      "unit": "mm/s",
+      "min_range": 0.1,
+      "max_range": 5.0,
+      "mean": 1.0,
+      "sd": 0.5,
+      "deviation_weight": 5
+    }
+  }

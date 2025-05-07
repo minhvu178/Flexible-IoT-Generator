@@ -1,34 +1,108 @@
-
 {
-  "general": {
-    "log_level": "INFO",
-    "data_persistence": {
-      "type": "mongodb",
-      "connection": {
-        "host": "localhost",
-        "port": 27017,
-        "database": "machinemeter",
-        "collection": "sensor_data"
+    "general": {
+      "log_level": "INFO",
+      "data_persistence": {
+        "type": "mongodb",
+        "connection": {
+          "host": "localhost",
+          "port": 27017,
+          "database": "iot_data",
+          "collection": "sensor_data",
+          "time_series": true,
+          "timestamp_field": "timestamp",
+          "metadata_field": "metadata",
+          "granularity": "seconds"
+        }
+      }
+    },
+    "simulation": {
+      "start_date": "2023-01-01T00:00:00Z",
+      "end_date": null,
+      "time_acceleration": 1,
+      "update_interval_ms": 1000
+    },
+    "factories": [
+      {
+        "id": "factory-101",
+        "name": "Johannesburg Plant",
+        "template": "metal_factory",
+        "time_zone": "+02:00",
+        "location": {
+          "latitude": -26.195246,
+          "longitude": 28.034088
+        },
+        "operating_hours": {
+          "start": "08:00",
+          "end": "20:00",
+          "days": [1, 2, 3, 4, 5]
+        }
+      },
+      {
+        "id": "factory-102",
+        "name": "Cape Town Plant",
+        "template": "plastic_factory",
+        "time_zone": "+02:00",
+        "location": {
+          "latitude": -33.924869,
+          "longitude": 18.424055
+        },
+        "operating_hours": {
+          "start": "06:00",
+          "end": "18:00",
+          "days": [1, 2, 3, 4, 5]
+        }
+      },
+      {
+        "id": "factory-103",
+        "name": "Pretoria Plant",
+        "template": "oil_plant",
+        "time_zone": "+02:00",
+        "location": {
+          "latitude": -25.747855, 
+          "longitude": 28.188057
+        },
+        "operating_hours": {
+          "start": "00:00",
+          "end": "23:59",
+          "days": [0, 1, 2, 3, 4, 5, 6]
+        }
+      },
+      {
+        "id": "factory-104",
+        "name": "Durban Plant",
+        "template": "food_factory",
+        "time_zone": "+02:00",
+        "location": {
+          "latitude": -29.8587,
+          "longitude": 31.0218
+        },
+        "operating_hours": {
+          "start": "06:00",
+          "end": "22:00",
+          "days": [0, 1, 2, 3, 4, 5, 6]
+        }
+      }
+    ],
+    "generator_settings": {
+      "sensor": {
+        "enabled": true,
+        "report_interval_ms": 5000
+      },
+      "machine_status": {
+        "enabled": true,
+        "report_interval_ms": 60000
+      },
+      "production": {
+        "enabled": true,
+        "report_interval_ms": 900000
+      },
+      "quality": {
+        "enabled": true,
+        "report_interval_ms": 900000
+      },
+      "energy": {
+        "enabled": true,
+        "report_interval_ms": 300000
       }
     }
-  },
-  "simulation": {
-    "start_date": "2025-05-01T00:00:00Z",
-    "end_date": null,
-    "time_acceleration": 1,
-    "update_interval_ms": 1000
-  },
-  "factories": [
-    {
-      "id": "factory-101",
-      "name": "Hanoi Plant",
-      "template": "plastic_factory",
-      "time_zone": "+07:00",
-      "operating_hours": {
-        "start": "08:00",
-        "end": "20:00",
-        "days": [1, 2, 3, 4, 5]
-      }
-    }
-  ]
-}
+  }

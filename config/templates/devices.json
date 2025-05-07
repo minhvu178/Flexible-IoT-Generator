@@ -1,0 +1,476 @@
+{
+    "extruder": {
+      "sensors": [
+        {
+          "sensorId": "temp-1",
+          "sensorType": "temperature",
+          "unit": "Celsius",
+          "min_range": 160,
+          "max_range": 200,
+          "mean": 180,
+          "sd": 5,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "pressure-1",
+          "sensorType": "pressure",
+          "unit": "Bar",
+          "min_range": 50,
+          "max_range": 80,
+          "mean": 65,
+          "sd": 5,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "flow-1",
+          "sensorType": "flow_rate",
+          "unit": "kg/h",
+          "min_range": 20,
+          "max_range": 50,
+          "mean": 35,
+          "sd": 3,
+          "deviation_weight": 5
+        }
+      ]
+    },
+    "injection_molder": {
+      "sensors": [
+        {
+          "sensorId": "temp-1",
+          "sensorType": "temperature",
+          "unit": "Celsius",
+          "min_range": 200,
+          "max_range": 300,
+          "mean": 250,
+          "sd": 10,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "pressure-1",
+          "sensorType": "pressure",
+          "unit": "Bar",
+          "min_range": 100,
+          "max_range": 200,
+          "mean": 150,
+          "sd": 15,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "cycle-1",
+          "sensorType": "cycle_time",
+          "unit": "seconds",
+          "min_range": 15,
+          "max_range": 40,
+          "mean": 25,
+          "sd": 2,
+          "deviation_weight": 5
+        }
+      ]
+    },
+    "oil_pump": {
+      "sensors": [
+        {
+          "sensorId": "temp-1",
+          "sensorType": "temperature",
+          "unit": "Celsius",
+          "min_range": 60,
+          "max_range": 100,
+          "mean": 75,
+          "sd": 5,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "temp-2",
+          "sensorType": "temperature",
+          "unit": "Celsius",
+          "min_range": 60,
+          "max_range": 100,
+          "mean": 75,
+          "sd": 10,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "pressure-1",
+          "sensorType": "pressure",
+          "unit": "Psi",
+          "min_range": 28,
+          "max_range": 56,
+          "mean": 35,
+          "sd": 10,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "rpm-1",
+          "sensorType": "revolutions",
+          "unit": "RPM",
+          "min_range": 2500,
+          "max_range": 3000,
+          "mean": 2750,
+          "sd": 100,
+          "deviation_weight": 5
+        }
+      ]
+    },
+    "oven": {
+      "sensors": [
+        {
+          "sensorId": "temp-1",
+          "sensorType": "temperature",
+          "unit": "Celsius",
+          "min_range": 60,
+          "max_range": 80,
+          "mean": 70,
+          "sd": 5,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "temp-2",
+          "sensorType": "temperature",
+          "unit": "Celsius",
+          "min_range": 70,
+          "max_range": 100,
+          "mean": 80,
+          "sd": 10,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "pressure-1",
+          "sensorType": "pressure",
+          "unit": "Psi",
+          "min_range": 14,
+          "max_range": 56,
+          "mean": 40,
+          "sd": 5,
+          "deviation_weight": 5
+        }
+      ]
+    },
+    "gas_oven": {
+      "sensors": [
+        {
+          "sensorId": "temp-1",
+          "sensorType": "temperature",
+          "unit": "Celsius",
+          "min_range": 600,
+          "max_range": 800,
+          "mean": 700,
+          "sd": 20,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "temp-2",
+          "sensorType": "temperature",
+          "unit": "Celsius",
+          "min_range": 160,
+          "max_range": 200,
+          "mean": 180,
+          "sd": 10,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "pressure-1",
+          "sensorType": "pressure",
+          "unit": "Psi",
+          "min_range": 28,
+          "max_range": 56,
+          "mean": 100,
+          "sd": 10,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "volume-1",
+          "sensorType": "volume",
+          "unit": "Liter",
+          "min_range": 5,
+          "max_range": 15,
+          "mean": 10,
+          "sd": 4,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "flow-1",
+          "sensorType": "flow_rate",
+          "unit": "L/min",
+          "min_range": 2000,
+          "max_range": 3000,
+          "mean": 2400,
+          "sd": 30,
+          "deviation_weight": 5
+        }
+      ]
+    },
+    "fuel_pump": {
+      "sensors": [
+        {
+          "sensorId": "temp-1",
+          "sensorType": "temperature",
+          "unit": "Celsius",
+          "min_range": 750,
+          "max_range": 1000,
+          "mean": 825,
+          "sd": 30,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "temp-2",
+          "sensorType": "temperature",
+          "unit": "Celsius",
+          "min_range": 850,
+          "max_range": 950,
+          "mean": 900,
+          "sd": 10,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "pressure-1",
+          "sensorType": "pressure",
+          "unit": "Psi",
+          "min_range": 2000,
+          "max_range": 2400,
+          "mean": 2200,
+          "sd": 100,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "pressure-2",
+          "sensorType": "pressure",
+          "unit": "BAR",
+          "min_range": 100,
+          "max_range": 140,
+          "mean": 120,
+          "sd": 10,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "flow-1",
+          "sensorType": "flow_rate",
+          "unit": "L/min",
+          "min_range": 6,
+          "max_range": 12,
+          "mean": 10,
+          "sd": 4,
+          "deviation_weight": 5
+        }
+      ]
+    },
+    "water_pump": {
+      "sensors": [
+        {
+          "sensorId": "pressure-1",
+          "sensorType": "pressure",
+          "unit": "BAR",
+          "min_range": 200,
+          "max_range": 300,
+          "mean": 250,
+          "sd": 20,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "pressure-2",
+          "sensorType": "pressure",
+          "unit": "BAR",
+          "min_range": 400,
+          "max_range": 500,
+          "mean": 440,
+          "sd": 20,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "rpm-1",
+          "sensorType": "revolutions",
+          "unit": "RPM",
+          "min_range": 2500,
+          "max_range": 3000,
+          "mean": 2700,
+          "sd": 20,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "flow-1",
+          "sensorType": "flow_rate",
+          "unit": "L/min",
+          "min_range": 200,
+          "max_range": 300,
+          "mean": 240,
+          "sd": 10,
+          "deviation_weight": 5
+        }
+      ]
+    },
+    "cnc_machine": {
+      "sensors": [
+        {
+          "sensorId": "temp-1",
+          "sensorType": "temperature",
+          "unit": "Celsius",
+          "min_range": 50,
+          "max_range": 80,
+          "mean": 65,
+          "sd": 5,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "rpm-1",
+          "sensorType": "revolutions",
+          "unit": "RPM",
+          "min_range": 1000,
+          "max_range": 20000,
+          "mean": 10000,
+          "sd": 500,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "vibration-1",
+          "sensorType": "vibration",
+          "unit": "mm/s",
+          "min_range": 0.1,
+          "max_range": 4.0,
+          "mean": 1.2,
+          "sd": 0.5,
+          "deviation_weight": 5
+        }
+      ]
+    },
+    "conveyer_motor": {
+      "sensors": [
+        {
+          "sensorId": "temp-1",
+          "sensorType": "temperature",
+          "unit": "Celsius",
+          "min_range": 50,
+          "max_range": 70,
+          "mean": 60,
+          "sd": 5,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "rpm-1",
+          "sensorType": "revolutions",
+          "unit": "RPM",
+          "min_range": 1000,
+          "max_range": 1500,
+          "mean": 1300,
+          "sd": 20,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "voltage-1",
+          "sensorType": "voltage",
+          "unit": "Volt",
+          "min_range": 320,
+          "max_range": 380,
+          "mean": 360,
+          "sd": 10,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "current-1",
+          "sensorType": "current",
+          "unit": "Amp",
+          "min_range": 20,
+          "max_range": 30,
+          "mean": 24,
+          "sd": 4,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "vibration-1",
+          "sensorType": "vibration",
+          "unit": "m/s",
+          "min_range": 5,
+          "max_range": 10,
+          "mean": 7,
+          "sd": 3,
+          "deviation_weight": 5
+        }
+      ]
+    },
+    "hoist_motor": {
+      "sensors": [
+        {
+          "sensorId": "temp-1",
+          "sensorType": "temperature",
+          "unit": "Celsius",
+          "min_range": 60,
+          "max_range": 80,
+          "mean": 70,
+          "sd": 10,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "rpm-1",
+          "sensorType": "revolutions",
+          "unit": "RPM",
+          "min_range": 2000,
+          "max_range": 2500,
+          "mean": 2200,
+          "sd": 20,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "voltage-1",
+          "sensorType": "voltage",
+          "unit": "Volt",
+          "min_range": 320,
+          "max_range": 380,
+          "mean": 360,
+          "sd": 10,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "current-1",
+          "sensorType": "current",
+          "unit": "Amp",
+          "min_range": 20,
+          "max_range": 30,
+          "mean": 24,
+          "sd": 4,
+          "deviation_weight": 5
+        }
+      ]
+    },
+    "pressure_oven": {
+      "sensors": [
+        {
+          "sensorId": "temp-1",
+          "sensorType": "temperature",
+          "unit": "Celsius",
+          "min_range": 3500,
+          "max_range": 4500,
+          "mean": 4000,
+          "sd": 30,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "temp-2",
+          "sensorType": "temperature",
+          "unit": "Celsius",
+          "min_range": 4000,
+          "max_range": 6000,
+          "mean": 4800,
+          "sd": 50,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "voltage-1",
+          "sensorType": "voltage",
+          "unit": "Volt",
+          "min_range": 320,
+          "max_range": 380,
+          "mean": 360,
+          "sd": 10,
+          "deviation_weight": 5
+        },
+        {
+          "sensorId": "current-1",
+          "sensorType": "current",
+          "unit": "Amp",
+          "min_range": 20,
+          "max_range": 30,
+          "mean": 24,
+          "sd": 4,
+          "deviation_weight": 5
+        }
+      ]
+    }
+  }
