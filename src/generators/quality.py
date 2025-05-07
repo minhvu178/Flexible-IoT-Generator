@@ -1,7 +1,7 @@
 # src/generators/quality.py
 import random
 from datetime import timedelta
-from src.base import BaseGenerator
+from .base import BaseGenerator
 
 class QualityGenerator(BaseGenerator):
     """Generates product quality data."""

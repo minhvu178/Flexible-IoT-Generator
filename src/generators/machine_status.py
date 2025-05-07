@@ -2,7 +2,7 @@
 from datetime import datetime, timedelta
 from enum import Enum
 import random
-from src.generators.base import BaseGenerator
+from .base import BaseGenerator
 
 class MachineStatus(Enum):
     """Enum for machine status values."""

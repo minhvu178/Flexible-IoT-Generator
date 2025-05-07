@@ -1,8 +1,8 @@
 # src/generators/production.py
 import random
 from datetime import timedelta
-from src.base import BaseGenerator
-from src.machine_status import MachineStatus
+from .base import BaseGenerator
+from .machine_status import MachineStatus
 
 class ProductionGenerator(BaseGenerator):
     """Generates production count data."""
