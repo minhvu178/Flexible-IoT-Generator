@@ -1,7 +1,7 @@
 # src/__main__.py
 import argparse
 import os
-from app import Application
+from src.app import Application
 
 def main():
     """Entry point for the application."""
