@@ -2,16 +2,9 @@
     "general": {
       "log_level": "INFO",
       "data_persistence": {
-        "type": "mongodb",
+        "type": "file",
         "connection": {
-          "host": "localhost",
-          "port": 27017,
-          "database": "iot_data",
-          "collection": "sensor_data",
-          "time_series": true,
-          "timestamp_field": "timestamp",
-          "metadata_field": "metadata",
-          "granularity": "seconds"
+          "path": "data/files"
         }
       }
     },
