@@ -62,7 +62,7 @@ class Sensor:
         Args:
             template_name: Name of the template to load
         """
-        template_path = os.path.join('config', 'templates', 'sensors.json')
+        template_path = os.path.join('/home/minhvu/Flexible-IoT-Generator', 'config', 'templates', 'sensors.json')
         
         if not os.path.exists(template_path):
             return

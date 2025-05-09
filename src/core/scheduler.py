@@ -7,6 +7,8 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from apscheduler.triggers.interval import IntervalTrigger
 from ..utils.time_utils import get_timezone
 
+import time
+
 class Scheduler:
     """Task scheduler for periodic data generation."""
     

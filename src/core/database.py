@@ -2,6 +2,7 @@
 import pymongo
 import json
 import os
+from ..utils.datetime_utils import datetime_json_dumps
 
 class Database:
     """Database connectivity manager."""
@@ -100,7 +101,7 @@ class Database:
             
             # Append to file
             with open(filepath, 'a') as f:
-                f.write(json.dumps(document) + '\n')
+                f.write(datetime_json_dumps(document) + '\n')
                 
             return True
     
@@ -142,6 +143,6 @@ class Database:
                 
                 with open(filepath, 'a') as f:
                     for doc in docs:
-                        f.write(json.dumps(doc) + '\n')
+                        f.write(datetime_json_dumps(doc) + '\n')
             
             return True

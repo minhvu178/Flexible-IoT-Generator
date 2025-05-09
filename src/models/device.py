@@ -63,7 +63,7 @@ class Device:
         Args:
             template_name: Name of the template to load
         """
-        template_path = os.path.join('config', 'templates', 'devices.json')
+        template_path = os.path.join('/home/minhvu/Flexible-IoT-Generator', 'config', 'templates', 'devices.json')
         
         if not os.path.exists(template_path):
             return
