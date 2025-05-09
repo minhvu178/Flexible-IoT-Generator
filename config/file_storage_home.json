@@ -1,0 +1,29 @@
+{
+    "general": {
+      "log_level": "INFO",
+      "data_persistence": {
+        "type": "file",
+        "connection": {
+          "path": "/home/minhvu/iot_data"
+        }
+      }
+    },
+    "simulation": {
+      "start_date": "2023-01-01T00:00:00Z",
+      "end_date": null,
+      "time_acceleration": 1,
+      "update_interval_ms": 1000
+    },
+    "factories": [
+      {
+        "id": "factory-101",
+        "name": "Johannesburg Plant",
+        "template": "metal_factory",
+        "time_zone": "+02:00",
+        "location": {
+          "latitude": -26.195246,
+          "longitude": 28.034088
+        }
+      }
+    ]
+  }
